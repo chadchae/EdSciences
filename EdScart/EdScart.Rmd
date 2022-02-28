@@ -1,18 +1,17 @@
 ---
-title: Full title of the paper (Capitalized)
+title: DATA SHARING
 author:
-  - name: Dominik Leutnant
+  - name: David Passmore
     affil: 1,2,\ddagger,*
-    orcid: 0000-0003-3293-2315
+    orcid: 0000-0001-9307-5164
   - name: John Doe
     affil: 2, \dagger, \ddagger
 affiliation:
   - num: 1
     address: |
-      Muenster University of Applied Sciences - 
-      Institute for Infrastructure, Water, Resources, Environment
-      Correnstr. 25, 48149 Muenster, Germany
-    email: leutnant@fh-muenster.de
+      5 Bayard Road, Unit 403 - 
+      Pittsburgh, Pennsylvania 15213-1903 USA
+    email: dlp@davidpassmore.net
   - num: 2
     address: |
       Your department
@@ -24,7 +23,7 @@ firstnote: |
 secondnote: |
   These authors contributed equally to this work.
 correspondence: |
-  leutnant@fh-muenster.de; Tel.: +XX-000-00-0000.
+  dlp@davidpassmore.net; Tel.: +1-814-571-8937.
 journal: water
 type: article
 status: submit
