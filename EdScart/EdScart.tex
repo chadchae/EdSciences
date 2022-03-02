@@ -72,7 +72,7 @@
 
 %=================================================================
 % Full title of the paper (Capitalized)
-\Title{DATA SHARING}
+\Title{DATA SHARING TESTING LATEX}
 
 % Authors, for the paper (add full first names)
 \Author{David
@@ -91,8 +91,8 @@ $^{2}$ \quad Your department Street, City,
 Country; \href{mailto:mail@mail.com}{\nolinkurl{mail@mail.com}}\\
 }
 % Contact information of the corresponding author
-\corres{Correspondence: \href{mailto:leutnant@fh-muenster.de}{\nolinkurl{leutnant@fh-muenster.de}};
-Tel.: +XX-000-00-0000.}
+\corres{Correspondence: \href{mailto:dlp@davidpassmore.net}{\nolinkurl{dlp@davidpassmore.net}};
+Tel.: +1-814-571-8937.}
 
 % Current address and/or shared authorship
 \firstnote{Current address: Updated affiliation}
@@ -158,6 +158,17 @@ subject discipline.).}
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+% From pandoc table feature
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 
 
 
@@ -173,7 +184,8 @@ This Rmd-skeleton uses the mdpi Latex template published 2019/02.
 However, the official template gets more frequently updated than the
 `rticles' package. Therefore, please make sure prior to paper
 submission, that you're using the most recent .cls, .tex and .bst files
-(available \href{http://www.mdpi.com/authors/latex}{here}).
+(available \href{http://www.mdpi.com/authors/latex}{here})
+\citep{arslan2017}.
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
@@ -197,15 +209,36 @@ Religions, Risks, Social Sciences.
 \hypertarget{materials-and-methods}{%
 \section{Materials and Methods}\label{materials-and-methods}}
 
+\begin{longtable}[]{@{}lll@{}}
+\caption{My Table}\tabularnewline
+\toprule
+Col1 & Col2 & Col3 \\
+\midrule
+\endfirsthead
+\toprule
+Col1 & Col2 & Col3 \\
+\midrule
+\endhead
+& & \\
+& & \\
+& & \\
+\bottomrule
+\end{longtable}
+
 Materials and Methods should be described with sufficient details to
 allow others to replicate and build on published results. Please note
 that publication of your manuscript implicates that you must make all
-materials, data, computer code, and protocols associated with the
-publication available to readers. Please disclose at the submission
-stage any restrictions on the availability of materials or information.
-New methods and protocols should be described in detail while
-well-established methods can be briefly described and appropriately
-cited.
+materials, data, computer code, and protocols \footnote{Testing the
+  footnote}associated with the publication available to readers. Please
+disclose at the submission stage any restrictions on the availability of
+materials or information. New methods and protocols should be described
+in detail while well-established methods can be briefly described and
+appropriately cited.
+
+\begin{description}
+\tightlist
+\item[what I think]
+\end{description}
 
 Research manuscripts reporting large datasets that are deposited in a
 publicly available database should specify where the data have been
